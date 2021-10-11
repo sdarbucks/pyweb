@@ -1,0 +1,16 @@
+webproject
+
+1. polls(프로젝트)
+    - poll 앱
+
+2. pyweb(인덱스, 로그인, 질문/답변, 주제메뉴)
+    - pybo(게시판) 앱
+    - common(회원) 앱
+    - 주제 앱
+
+3. blog 프로젝트, 북마크 프로젝트
+
+(mysite) c:\webproject\pyweb>django-admin startproject config .
+(mysite) c:\webproject\pyweb>python manage.py runserver	// 로켓 사이트
+
+https://skyksit.com/git/git-error-does-not-match/
