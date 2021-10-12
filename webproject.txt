@@ -13,4 +13,8 @@ webproject
 (mysite) c:\webproject\pyweb>django-admin startproject config .
 (mysite) c:\webproject\pyweb>python manage.py runserver	// 로켓 사이트
 
-https://skyksit.com/git/git-error-does-not-match/
+디자인 프레임워크 - 부트스트랩(bootstrap)
+bootstrap.css
+bootstrap.min.css
+
+base.html
