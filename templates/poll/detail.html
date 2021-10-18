@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container my-3">
+        <section>
+            <form action="{% url 'poll:vote' question.id %}" method="post" class="post-form my-3">
+                {% csrf_token %}
+                <fieldset>
+                    <legend><h3 class="border-bottom py-2">{{ question.question_text }}</h3></legend>
+                    {% if error_message %}
+                    <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    {% for choice in question.choice_set.all  %}
+                    <p>
+                        <input type="radio" name="choice" id="choice{{ forloop.counter }}"
+                                            value="{{ choice.id }}">
+                        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+                    </p>
+                    {% endfor %}
+                </fieldset>
+                <p><input type="submit" value="투표" class="btn btn-primary"></p>
+            </form>
+        </section>
+    </div>
+{% endblock %}

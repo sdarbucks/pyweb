@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container my-3">
+        <section id="result">
+            <h3 class="border-bottom py-2">{{ question.question_text }} - 결과</h3>
+            <ul class="list-group list-group-flush">
+                {% for choice in question.choice_set.all  %}
+                <li class="list-group-item">
+                    {{ choice.choice_text }} -- {{ choice.votes }} votes
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="mt-4" style="width: 200px;">
+                <div class="vote">
+                    <a href="{% url 'poll:detail' question.id %}" class="button">다시 투표하시겠습니까?</a>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
