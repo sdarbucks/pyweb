@@ -8,7 +8,7 @@ from poll.models import Question
 def poll_list(request):
     question_list = Question.objects.all()
     context = {'question_list': question_list}
-    return render(request, 'poll/index.html', context)
+    return render(request, 'poll/poll_list.html', context)
 
     #return HttpResponse("안녕하세요~ django")
 
